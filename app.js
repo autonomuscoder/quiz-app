@@ -8,7 +8,7 @@ const questions = [
     {
       question: "Question 2",
       answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
-      correctAnswer: 2
+      correctAnswer: 1
     },
     // Add more questions here...
   ];
@@ -23,6 +23,8 @@ const questions = [
   
     questionElement.textContent = questions[currentQuestion].question;
   
+  //this only creates list element not radio buttons
+
     // answersElement.innerHTML = "";
     // questions[currentQuestion].answers.forEach((answer, index) => {
     //   const li = document.createElement("li");
@@ -60,10 +62,10 @@ questions[currentQuestion].answers.forEach((answer, index) => {
     const feedbackElement = document.getElementById("feedback");
     const nextButton = document.getElementById("next-button");
   
-    const selectedAnswerIndex = Array.from(selectedAnswer.parentNode.children).indexOf(selectedAnswer);
-    const correctAnswerIndex = questions[currentQuestion].correctAnswer;
+    const selectedAnswerValue = selectedAnswer.value;
+    const correctAnswerValue = questions[currentQuestion].answers[questions[currentQuestion].correctAnswer];
   
-    if (selectedAnswerIndex === correctAnswerIndex) {
+    if (selectedAnswerValue === correctAnswerValue) {
       feedbackElement.textContent = "Correct!";
       score++;
     } else {
@@ -72,6 +74,7 @@ questions[currentQuestion].answers.forEach((answer, index) => {
   
     nextButton.disabled = false;
   }
+  
   
   // Function to move to the next question
   function nextQuestion() {
@@ -100,14 +103,14 @@ questions[currentQuestion].answers.forEach((answer, index) => {
     scoreElement.textContent = score;
   }
 
-  function handleCheckbox(checkbox) {
-    var checkboxes = document.getElementsByClassName('answer');
-    checkboxes.forEach(function(currentCheckbox) {
-      if (currentCheckbox !== checkbox) {
-        currentCheckbox.checked = false;
-      }
-    });
-  }
+  // function handleCheckbox(checkbox) {
+  //   var checkboxes = document.getElementsByClassName('answer');
+  //   checkboxes.forEach(function(currentCheckbox) {
+  //     if (currentCheckbox !== checkbox) {
+  //       currentCheckbox.checked = false;
+  //     }
+  //   });
+  // }
   
   // Event listener for the next button
   document.getElementById("next-button").addEventListener("click", nextQuestion);

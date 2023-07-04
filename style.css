@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+    body {
+      font-family: Montserrat, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-image: url("./bg.jpg");
+      background-size: cover;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    #question-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #2e2e2ea4;
+      /* color: white; */
+      border-radius: 5px;
+      /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+      position: relative;
+    }
+  
+    #question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      margin-bottom: 10px;
+    }
+  
+    label {
+      margin-left: 5px;
+    }
+  
+    /* #feedback-container {
+        display: block;
+        text-align: center;
+        align-items: center;
+    } */
+     
+    #feedback-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #feedback {
+      margin-top: 10px;
+      margin-right: 10px;
+      font-weight: bold;
+      position: absolute;
+      top: 366px;
+      right: 403px;
+    }
+  
+    #next-button {
+        position: absolute;
+        top: 352px;
+        right: 875px;
+        margin-top: 10px;
+        padding: 10px 20px;
+        /* background-color: #4caf50; */
+        background-color: #535353;
+        color: white;
+        border: none;
+        /* border-radius: 5px; */
+        cursor: pointer;
+      }
+  
+    #score-container {
+      display: none;
+      text-align: center;
+    }
+  
+    #score {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4caf50;
+    }
