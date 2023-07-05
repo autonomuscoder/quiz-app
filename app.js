@@ -1,13 +1,13 @@
 // Define your quiz questions and answers as an array of objects
 const questions = [
     {
-      question: "Question 1",
-      answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
-      correctAnswer: 0
+      question: "Who is the creator of Linux?",
+      answers: ["Linus Tech Tips", "Steve Jobs", "Linus Trovalds", "IBM"],
+      correctAnswer: 2
     },
     {
-      question: "Question 2",
-      answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+      question: "Which distribution uses the APT?",
+      answers: ["Arch", "Debian", "Void", "RHEL"],
       correctAnswer: 1
     },
     // Add more questions here...
